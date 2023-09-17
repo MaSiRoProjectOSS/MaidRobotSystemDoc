@@ -27,9 +27,10 @@ sudo apt update && sudo apt full-upgrade
 ```bash
 sudo apt update
 sudo apt install -y jq
-# Python 3.10.6
+# mediapipe 0.8.9.1
 pip install --upgrade pip
-pip install mediapipe==0.10.2
+pip install mediapipe
+pip install protobuf==3.20.*
 ```
 
 
@@ -58,22 +59,25 @@ ERROR: No matching distribution found for mediapipe
 
 ## 使用しているソフトウェア
 
-| Software Name | Package manager | 仕様している理由                   | Notes.                                                |
-| ------------- | --------------- | ---------------------------------- | ----------------------------------------------------- |
-| jq            | apt             | bash で config.json を処理するため |                                                       |
-| mediapipe     | pip             | 顔認識プログラムを動作させるため   | [pypi-mediapipe](https://pypi.org/project/mediapipe/) |
+| Software Name     | Package manager | 仕様している理由                   | Notes.                                                |
+| ----------------- | --------------- | ---------------------------------- | ----------------------------------------------------- |
+| jq                | apt             | bash で config.json を処理するため |                                                       |
+| mediapipe         | pip             | 顔認識プログラムを動作させるため   | [pypi-mediapipe](https://pypi.org/project/mediapipe/) |
+| python3-cv-bridge | apt             |                                    |                                                       |
+
+
 
 ### ROS2 node
 
-| Software Name                         | Unit      | 仕様している理由                   | Notes. |
-| ------------------------------------- | --------- | ---------------------------------- | ------ |
-| ros-humble-image-transport            | Head Unit | カメラ描画を取得するため           |        |
-| ros-humble-compressed-image-transport | Head Unit | 圧縮されたカメラ描画を取得するため |        |
-| ros-humble-theora-image-transport     | Head Unit | カメラ描画をライブ配信をする       |        |
-| ros-humble-image-transport-plugins    | Head Unit |                                    |        |
-|                                       |           |                                    |        |
-|                                       |           |                                    |        |
-|                                       |           |                                    |        |
+| Software Name                                | Unit      | 仕様している理由                   | Notes. |
+| -------------------------------------------- | --------- | ---------------------------------- | ------ |
+| ros-${ROS_DISTRO}-image-transport            | Head Unit | カメラ描画を取得するため           |        |
+| ros-${ROS_DISTRO}-compressed-image-transport | Head Unit | 圧縮されたカメラ描画を取得するため |        |
+| ros-${ROS_DISTRO}-theora-image-transport     | Head Unit | カメラ描画をライブ配信をする       |        |
+| ros-${ROS_DISTRO}-image-transport-plugins    | Head Unit |                                    |        |
+| ros-${ROS_DISTRO}-cv-bridge                  |           |                                    |        |
+|                                              |           |                                    |        |
+|                                              |           |                                    |        |
 
 
 ## インスール手順
@@ -92,12 +96,30 @@ ERROR: No matching distribution found for mediapipe
 build.sh <build | rebuild | clean> <debug | release> [select_package] [cmake_argument]
 
 
+## VS Code用のソフトウェア設定
+
+```bash
+sudo apt update
+
+## Markdown Preview Enhanced
+sudo apt install -y openjdk-17-jdk
+## C/C++ code format
+sudo apt install -y llvm clang clang-format
+
+```
+
 
 ## その他
 
 
-ビルド時にエラーが発生する場合
+### サポートツール
+
+* powertop
+
 
 ```bash
-pip install setuptools==58.2.0
+sudo apt install -y powertop
+
 ```
+
+

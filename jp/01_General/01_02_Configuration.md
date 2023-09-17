@@ -8,17 +8,17 @@
 ```json
 {
     "CAST": {
-        "MRS_MY_NAME_IS": "miko",
+        "MRS_CAST_NAME": "miko",
         "MRS_CAST_ID": 1000
     },
     "MRS_ROS": {
         "MRS_ROS_DOMAIN_ID": 0,
         "MRS_ROS_OUTPUT_TYPE": "log",
-        "MRS_ROS_NAMESPACE": "/maid_robot_system/${MRS_MY_NAME_IS}"
+        "MRS_ROS_NAMESPACE": "/maid_robot_system/${MRS_CAST_NAME}"
     },
     "MRS": {
         "MRS_WORKSPACE": "/opt/MaidRobotSystem",
-        "MRS_SKIN_HOME": "/opt/MaidRobotSystem/data/skin/${MRS_MY_NAME_IS}"
+        "MRS_SKIN_HOME": "/opt/MaidRobotSystem/data/skin/${MRS_CAST_NAME}"
     },
     "BUILD": {
         "BUILD_HEAD_UNIT": "ON",
