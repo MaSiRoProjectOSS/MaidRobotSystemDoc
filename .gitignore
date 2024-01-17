@@ -39,6 +39,9 @@
 **/.vscode/ipch
 **/.vscode/pinned-files.json
 
+# temp file
+**/.$*
+
 # ROS project
 **/rosdep
 **/.colcon

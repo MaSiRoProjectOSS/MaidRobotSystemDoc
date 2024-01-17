@@ -1,7 +1,10 @@
-# Configuration
+### Configuration
 
 
-## ROS環境
+<details>
+<summary>details</summary>
+
+#### ROS環境
 
 * フォルダ```${PROJECT_FOLDER}/data/config.json```にインスール先などの設定が可能です。
 
@@ -32,3 +35,6 @@
 }
 
 ```
+
+</details>
+

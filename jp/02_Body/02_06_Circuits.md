@@ -1,1 +1,7 @@
-## 02_06_Circuits
+### Circuits
+
+<details>
+<summary>details</summary>
+
+</details>
+

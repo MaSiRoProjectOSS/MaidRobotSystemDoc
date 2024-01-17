@@ -1,1 +1,7 @@
-## 02_04_Actuators
+### Actuators
+
+<details>
+<summary>details</summary>
+
+</details>
+

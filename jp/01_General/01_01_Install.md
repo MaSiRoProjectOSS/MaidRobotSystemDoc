@@ -1,5 +1,7 @@
-# Install
+### Install
 
+<details>
+<summary>details</summary>
 
 ```bash
 sudo apt install -y ros-humble-image-transport
@@ -9,7 +11,7 @@ sudo apt install -y ros-humble-compressed-image-transport ros-humble-theora-imag
 ```
 
 
-### Bazel
+##### Bazel
 
 ```bash
 sudo apt install apt-transport-https curl gnupg -y
@@ -34,7 +36,7 @@ pip install protobuf==3.20.*
 ```
 
 
-### mediapipe
+##### mediapipe
 
 ```bash
 sudo apt update
@@ -57,7 +59,7 @@ ERROR: Could not find a version that satisfies the requirement mediapipe (from v
 ERROR: No matching distribution found for mediapipe
 
 
-## 使用しているソフトウェア
+#### 使用しているソフトウェア
 
 | Software Name     | Package manager | 仕様している理由                   | Notes.                                                |
 | ----------------- | --------------- | ---------------------------------- | ----------------------------------------------------- |
@@ -67,7 +69,7 @@ ERROR: No matching distribution found for mediapipe
 
 
 
-### ROS2 node
+##### ROS2 node
 
 | Software Name                                | Unit      | 仕様している理由                   | Notes. |
 | -------------------------------------------- | --------- | ---------------------------------- | ------ |
@@ -80,14 +82,14 @@ ERROR: No matching distribution found for mediapipe
 |                                              |           |                                    |        |
 
 
-## インスール手順
+#### インスール手順
 
 * フォルダ```/opt/MaidRobotSystem```にショートカットリンクを作成します。
 上記のフォルダにあることが前提で作成してますが、もし別の場所にインストールしたい場合は、
 [Configuration](01_02_Configuration.md)にしたがって設定を変更してください。
 
 
-### ROSのインストール手順
+##### ROSのインストール手順
 
 ```bash
 /opt/MaidRobotSystem/src/planetary_module/ros/script/build.sh build release
@@ -96,7 +98,7 @@ ERROR: No matching distribution found for mediapipe
 build.sh <build | rebuild | clean> <debug | release> [select_package] [cmake_argument]
 
 
-## VS Code用のソフトウェア設定
+#### VS Code用のソフトウェア設定
 
 ```bash
 sudo apt update
@@ -109,10 +111,10 @@ sudo apt install -y llvm clang clang-format
 ```
 
 
-## その他
+#### その他
 
 
-### サポートツール
+##### サポートツール
 
 * powertop
 
@@ -121,5 +123,9 @@ sudo apt install -y llvm clang clang-format
 sudo apt install -y powertop
 
 ```
+
+
+
+</details>
 
 
